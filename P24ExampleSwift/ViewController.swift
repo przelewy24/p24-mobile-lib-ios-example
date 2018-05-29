@@ -17,13 +17,9 @@ class ViewController: UIViewController, P24TransferDelegate {
     @IBOutlet weak var sandnoxSwitch: UISwitch!
     @IBOutlet weak var tokenUrl: UITextField!
     
-    var settings: P24SettingsParams!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        settings = P24SettingsParams()
-        settings.saveBankCredentials = true
+        P24SdkConfig.setCertificatePinningEnabled(true);
     }
 
     func getCrc() -> String {
@@ -37,7 +33,7 @@ class ViewController: UIViewController, P24TransferDelegate {
         for _ in 0...25 {
             let r = (Int) (arc4random() % 62);
             
-            let c = alphabet[alphabet.characters.index(alphabet.startIndex, offsetBy: r)];
+            let c = alphabet[alphabet.index(alphabet.startIndex, offsetBy: r)];
             sId.append(c);
         }
         
@@ -71,7 +67,7 @@ class ViewController: UIViewController, P24TransferDelegate {
     
     
     func getTokenOrUrl() -> String? {
-        if (tokenUrl!.text?.characters.count == 0) {
+        if (tokenUrl!.text?.count == 0) {
             textViewResult.text = "You have to set transaction token or express transaction URL"
             textViewResult.backgroundColor = UIColor.red
             return nil
@@ -83,7 +79,6 @@ class ViewController: UIViewController, P24TransferDelegate {
         if let token = getTokenOrUrl() {
             let params = P24TrnRequestParams.init(token: token)!
             params.sandbox = sandnoxSwitch.isOn
-            params.settings = settings
             P24.startTrnRequest(params, in: self, delegate: self)
         }
     }
@@ -91,14 +86,12 @@ class ViewController: UIViewController, P24TransferDelegate {
     func startTrnDirect() {
         let params = P24TrnDirectParams.init(transactionParams: getTransactionParams())!
         params.sandbox = sandnoxSwitch.isOn
-        params.settings = settings
         P24.startTrnDirect(params, in: self, delegate: self)
     }
     
     func startPassage() {
         let params = P24TrnDirectParams.init(transactionParams: getPassageTransactionParams())!
         params.sandbox = sandnoxSwitch.isOn
-        params.settings = settings
         P24.startTrnDirect(params, in: self, delegate: self)
     }
     
