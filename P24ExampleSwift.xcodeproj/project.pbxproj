@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F46242D222C2044D00015951 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46242D122C2044D00015951 /* PassKit.framework */; };
 		F4C024A51F162C1800BF2CDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C024A41F162C1800BF2CDF /* ViewController.swift */; };
 		F7CBB8161C6DF8A000EC450A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB8151C6DF8A000EC450A /* AppDelegate.swift */; };
 		F7CBB81B1C6DF8A000EC450A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB8191C6DF8A000EC450A /* Main.storyboard */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F46242CF22C1FA7000015951 /* P24ExampleSwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = P24ExampleSwift.entitlements; sourceTree = "<group>"; };
+		F46242D122C2044D00015951 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		F4C024A41F162C1800BF2CDF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F7CBB8121C6DF8A000EC450A /* P24ExampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P24ExampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CBB8151C6DF8A000EC450A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F46242D222C2044D00015951 /* PassKit.framework in Frameworks */,
 				F7CBB8331C6DF9A700EC450A /* libz.1.2.5.tbd in Frameworks */,
 				F7CBB8311C6DF99F00EC450A /* libxml2.2.tbd in Frameworks */,
 				F7CBB82F1C6DF99600EC450A /* Foundation.framework in Frameworks */,
@@ -55,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F46242D022C2044D00015951 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F46242D122C2044D00015951 /* PassKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F7CBB8091C6DF8A000EC450A = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +79,7 @@
 				F7CBB8281C6DF95500EC450A /* P24.h */,
 				F7CBB8141C6DF8A000EC450A /* P24ExampleSwift */,
 				F7CBB8131C6DF8A000EC450A /* Products */,
+				F46242D022C2044D00015951 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +94,7 @@
 		F7CBB8141C6DF8A000EC450A /* P24ExampleSwift */ = {
 			isa = PBXGroup;
 			children = (
+				F46242CF22C1FA7000015951 /* P24ExampleSwift.entitlements */,
 				F4C024A41F162C1800BF2CDF /* ViewController.swift */,
 				F7CBB8151C6DF8A000EC450A /* AppDelegate.swift */,
 				F7CBB8191C6DF8A000EC450A /* Main.storyboard */,
@@ -125,6 +139,11 @@
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 8KQ8NXL3V9;
 						LastSwiftMigration = 0830;
+						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -133,6 +152,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -232,7 +252,9 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -269,8 +291,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -278,6 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = P24ExampleSwift/P24ExampleSwift.entitlements;
 				DEVELOPMENT_TEAM = 8KQ8NXL3V9;
 				ENABLE_BITCODE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -292,10 +317,10 @@
 					"-ObjC",
 					"-lstdc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pl.przelewy24.P24ExampleSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = pl.przelewy24.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "P24ExampleSwift/P24ExampleSwift-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -303,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = P24ExampleSwift/P24ExampleSwift.entitlements;
 				DEVELOPMENT_TEAM = 8KQ8NXL3V9;
 				ENABLE_BITCODE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -317,10 +343,10 @@
 					"-ObjC",
 					"-lstdc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pl.przelewy24.P24ExampleSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = pl.przelewy24.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "P24ExampleSwift/P24ExampleSwift-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

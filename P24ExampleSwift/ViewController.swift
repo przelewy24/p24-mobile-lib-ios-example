@@ -8,9 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, P24TransferDelegate {
- 
-    
+class ViewController: UIViewController, P24TransferDelegate, P24ApplePayTransactionRegistrar, P24ApplePayDelegate {
+   
     let merchantId = Int32(64195)
 
     @IBOutlet weak var textViewResult: UILabel!
@@ -48,7 +47,7 @@ class ViewController: UIViewController, P24TransferDelegate {
 
     @IBAction func trnRequestClicked(_ sender: Any) {
         clearInfo()
-        startTrnRequest();
+        startTrnRequest()
     }
     
     @IBAction func trnDirectClicked(_ sender: Any) {
@@ -62,9 +61,13 @@ class ViewController: UIViewController, P24TransferDelegate {
     }
     @IBAction func expresClicked(_ sender: Any) {
         clearInfo()
-        startExpress();
+        startExpress()
     }
     
+    @IBAction func applePayClicked(_ sender: Any) {
+        clearInfo()
+        startApplePay()
+    }
     
     func getTokenOrUrl() -> String? {
         if (tokenUrl!.text?.count == 0) {
@@ -103,6 +106,11 @@ class ViewController: UIViewController, P24TransferDelegate {
         }
     }
     
+    func startApplePay() {
+        let params = P24ApplePayParams.init(appleMerchantId: "merchant.Przelewy24.sandbox", amount: 1, currency: "PLN", registrar: self)
+        
+        P24.startApplePay(params, in: self, delegate: self)
+    }
     
     func getTransactionParams() -> P24TransactionParams {
     
@@ -173,6 +181,27 @@ class ViewController: UIViewController, P24TransferDelegate {
     
     func p24Transfer(onError errorCode: String!) {
         textViewResult.text = "Transaction error \(errorCode)"
+        textViewResult.backgroundColor = UIColor.red
+    }
+    
+    // MARK: P24ApplePayTransactionRegistrar
+    func exchange(_ applePayToken: String!, delegate: P24ApplePayTransactionRegistrarDelegate!) {
+        delegate.onRegisterSuccess("D485AEB65C-C0F20B-9BC29D-BA835F21C4")
+    }
+    
+    // MARK: P24ApplePayDelegate
+    func p24ApplePayOnSuccess() {
+        textViewResult.text = "Apple Pay success"
+        textViewResult.backgroundColor = UIColor.green
+    }
+    
+    func p24ApplePayOnCanceled() {
+        textViewResult.text = "Apple Pay cancelled"
+        textViewResult.backgroundColor = UIColor.orange
+    }
+    
+    func p24ApplePay(onError errorCode: String!) {
+        textViewResult.text = "Apple Pay error \(errorCode)"
         textViewResult.backgroundColor = UIColor.red
     }
 
