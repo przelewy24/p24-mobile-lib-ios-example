@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, P24TransferDelegate, P24ApplePayTransactionRegistrar, P24ApplePayDelegate {
+class ViewController: UIViewController, P24TransferDelegate, P24ApplePayTransactionRegistrar, P24ApplePayDelegate, P24RegisterCardDelegate {
    
     let merchantId = Int32(64195)
 
@@ -44,6 +44,11 @@ class ViewController: UIViewController, P24TransferDelegate, P24ApplePayTransact
         textViewResult.text = ""
         textViewResult.backgroundColor = UIColor.clear
     }
+    
+    @IBAction func registerClicked(_ sender: Any) {
+        clearInfo()
+        registerCard();
+    }
 
     @IBAction func trnRequestClicked(_ sender: Any) {
         clearInfo()
@@ -76,6 +81,17 @@ class ViewController: UIViewController, P24TransferDelegate, P24ApplePayTransact
             return nil
         }
         return tokenUrl.text!
+    }
+    
+    func registerCard() {
+        if let url = getTokenOrUrl() {
+            //            let params = P24RegisterCardParams.init(url: url);
+            
+            let cardData = P24CardData(cardNumber: "11112222333344445555", month: 4, year: 2021, cvv: "453")
+            let params = P24RegisterCardParams(url: url, data: cardData)
+            
+            P24.startRegisterCard(params, in: self, delegate: self);
+        }
     }
     
     func startTrnRequest() {
@@ -203,6 +219,24 @@ class ViewController: UIViewController, P24TransferDelegate, P24ApplePayTransact
     func p24ApplePay(onError errorCode: String!) {
         textViewResult.text = "Apple Pay error \(errorCode)"
         textViewResult.backgroundColor = UIColor.red
+    }
+    
+    // MARK: P24RegisterCardDelegate
+    func p24RegisterCardError(_ errorCode: String!) {
+        textViewResult.text = "Transaction error \(errorCode)";
+        textViewResult.backgroundColor = UIColor.red;
+    }
+    
+    func p24RegisterCardCancel() {
+        
+        textViewResult.text = "Transaction cancelled";
+        textViewResult.backgroundColor = UIColor.orange;
+    }
+    
+    func p24RegisterCardSuccess(_ p24RegisterCardResult: P24RegisterCardResult!) {
+        
+        textViewResult.text = "Card registered \(p24RegisterCardResult.cardToken!)";
+        textViewResult.backgroundColor = UIColor.green;
     }
 
 }

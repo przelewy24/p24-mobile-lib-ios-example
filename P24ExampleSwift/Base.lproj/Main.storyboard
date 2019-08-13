@@ -123,6 +123,19 @@
                                     <action selector="applePayClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xjv-R2-GJF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfn-4e-tc9">
+                                <rect key="frame" x="63.5" y="28" width="193" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4yJ-PH-43Z"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="SvW-Fk-WZk"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="193" id="cc9-5d-b0P"/>
+                                    <constraint firstAttribute="width" constant="193" id="wu5-zt-XTW"/>
+                                </constraints>
+                                <state key="normal" title="Register card"/>
+                                <connections>
+                                    <action selector="registerClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0i-Oh-uEo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -143,9 +156,11 @@
                             <constraint firstItem="tt1-Pm-sZn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="2" id="f6P-Wg-e5l"/>
                             <constraint firstItem="Td6-Fm-oU9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fJg-4n-knG"/>
                             <constraint firstItem="5xu-bo-EAp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="feP-wF-p0j"/>
+                            <constraint firstItem="Bfn-4e-tc9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ie1-wW-JBC"/>
                             <constraint firstItem="AUL-Xj-7wy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="48" id="kUn-T7-pc8"/>
                             <constraint firstItem="UWg-tP-ZhT" firstAttribute="top" secondItem="tt1-Pm-sZn" secondAttribute="bottom" constant="15" id="kcQ-u8-hcw"/>
                             <constraint firstItem="48k-6Y-972" firstAttribute="top" secondItem="AUL-Xj-7wy" secondAttribute="bottom" id="oPT-kc-8zq"/>
+                            <constraint firstItem="Bfn-4e-tc9" firstAttribute="centerX" secondItem="RgB-ku-OnI" secondAttribute="centerX" id="oVs-Iv-qbv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Pbs-O4-4FL" secondAttribute="trailing" constant="121" id="olQ-Ji-qym"/>
                             <constraint firstAttribute="trailingMargin" secondItem="48k-6Y-972" secondAttribute="trailing" constant="47" id="pmT-tp-ybX"/>
                             <constraint firstItem="2Z1-Wg-Jh1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uYY-wC-Pa8"/>
