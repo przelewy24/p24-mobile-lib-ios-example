@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F45604CF23435D4E007A375D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45604CE23435D4E007A375D /* WebKit.framework */; };
 		F46242D222C2044D00015951 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46242D122C2044D00015951 /* PassKit.framework */; };
 		F4C024A51F162C1800BF2CDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C024A41F162C1800BF2CDF /* ViewController.swift */; };
 		F7CBB8161C6DF8A000EC450A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB8151C6DF8A000EC450A /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F45604CE23435D4E007A375D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F46242CF22C1FA7000015951 /* P24ExampleSwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = P24ExampleSwift.entitlements; sourceTree = "<group>"; };
 		F46242D122C2044D00015951 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		F4C024A41F162C1800BF2CDF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 			files = (
 				F46242D222C2044D00015951 /* PassKit.framework in Frameworks */,
 				F7CBB8331C6DF9A700EC450A /* libz.1.2.5.tbd in Frameworks */,
+				F45604CF23435D4E007A375D /* WebKit.framework in Frameworks */,
 				F7CBB8311C6DF99F00EC450A /* libxml2.2.tbd in Frameworks */,
 				F7CBB82F1C6DF99600EC450A /* Foundation.framework in Frameworks */,
 				F7CBB82D1C6DF99000EC450A /* UIKit.framework in Frameworks */,
@@ -62,6 +65,7 @@
 		F46242D022C2044D00015951 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F45604CE23435D4E007A375D /* WebKit.framework */,
 				F46242D122C2044D00015951 /* PassKit.framework */,
 			);
 			name = Frameworks;
