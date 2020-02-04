@@ -19,6 +19,7 @@ class ViewController: UIViewController, P24TransferDelegate, P24ApplePayTransact
     override func viewDidLoad() {
         super.viewDidLoad()
         P24SdkConfig.setCertificatePinningEnabled(true);
+        P24SdkConfig.setExitOnBackButtonEnabled(false)
     }
 
     func getCrc() -> String {
@@ -84,14 +85,14 @@ class ViewController: UIViewController, P24TransferDelegate, P24ApplePayTransact
     }
     
     func registerCard() {
-        if let url = getTokenOrUrl() {
+        let url = "https://sandbox.przelewy24.pl/bundle/card/register?token=794763A24B-558BF0-D96147-936173AEB1"
             //            let params = P24RegisterCardParams.init(url: url);
             
             let cardData = P24CardData(cardNumber: "11112222333344445555", month: 4, year: 2021, cvv: "453")
             let params = P24RegisterCardParams(url: url, data: cardData)
             
             P24.startRegisterCard(params, in: self, delegate: self);
-        }
+        
     }
     
     func startTrnRequest() {

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F45604CF23435D4E007A375D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45604CE23435D4E007A375D /* WebKit.framework */; };
-		F46242D222C2044D00015951 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46242D122C2044D00015951 /* PassKit.framework */; };
+		F4BEE071237595AD00BB45FF /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46242D122C2044D00015951 /* PassKit.framework */; };
 		F4C024A51F162C1800BF2CDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C024A41F162C1800BF2CDF /* ViewController.swift */; };
 		F7CBB8161C6DF8A000EC450A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB8151C6DF8A000EC450A /* AppDelegate.swift */; };
 		F7CBB81B1C6DF8A000EC450A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB8191C6DF8A000EC450A /* Main.storyboard */; };
@@ -48,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F46242D222C2044D00015951 /* PassKit.framework in Frameworks */,
+				F4BEE071237595AD00BB45FF /* PassKit.framework in Frameworks */,
 				F7CBB8331C6DF9A700EC450A /* libz.1.2.5.tbd in Frameworks */,
 				F45604CF23435D4E007A375D /* WebKit.framework in Frameworks */,
 				F7CBB8311C6DF99F00EC450A /* libxml2.2.tbd in Frameworks */,
