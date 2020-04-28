@@ -124,9 +124,35 @@ class ViewController: UIViewController, P24TransferDelegate, P24ApplePayTransact
     }
     
     func startApplePay() {
-        let params = P24ApplePayParams.init(appleMerchantId: "merchant.Przelewy24.sandbox", amount: 1, currency: "PLN", registrar: self)
+        
+        let params = P24ApplePayParams.init(
+            appleMerchantId: "merchant.Przelewy24.sandbox",
+            amount: 1,
+            currency: "PLN",
+            description: "Test payment",
+            registrar: self
+        )
+
+//        let params = P24ApplePayParams.init(
+//            items: buildItemsList(),
+//            currency: "PLN",
+//            appleMerchantId: "merchant.Przelewy24.sandbox",
+//            registrar: self
+//        )
         
         P24.startApplePay(params, in: self, delegate: self)
+    }
+    
+    func buildItemsList() -> [PaymentItem] {
+        let firstItem = PaymentItem()
+        firstItem.amount = 10
+        firstItem.itemDescription = "First item"
+        
+        let secondItem = PaymentItem()
+        secondItem.amount = 20
+        secondItem.itemDescription = "SecondItem"
+        
+        return [firstItem, secondItem]
     }
     
     func getTransactionParams() -> P24TransactionParams {
@@ -241,7 +267,6 @@ class ViewController: UIViewController, P24TransferDelegate, P24ApplePayTransact
     }
 
 }
-
 
 
 
