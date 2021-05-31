@@ -240,8 +240,3 @@
 
 @end
 
-
-
-@interface P24 (Secure)
-
-@end
