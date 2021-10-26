@@ -54,7 +54,6 @@
 		F7CBB82E1C6DF99600EC450A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F7CBB8301C6DF99F00EC450A /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		F7CBB8321C6DF9A700EC450A /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
-		F7CBB8341C6E00DE00EC450A /* P24ExampleSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "P24ExampleSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +117,6 @@
 				F7CBB81C1C6DF8A000EC450A /* Assets.xcassets */,
 				F7CBB81E1C6DF8A000EC450A /* LaunchScreen.storyboard */,
 				F7CBB8211C6DF8A000EC450A /* Info.plist */,
-				F7CBB8341C6E00DE00EC450A /* P24ExampleSwift-Bridging-Header.h */,
 			);
 			path = P24ExampleSwift;
 			sourceTree = "<group>";
@@ -323,7 +321,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INFOPLIST_FILE = P24ExampleSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,7 +336,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pl.przelewy24.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "P24ExampleSwift/P24ExampleSwift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				VALIDATE_WORKSPACE = YES_ERROR;
 			};
@@ -353,7 +351,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INFOPLIST_FILE = P24ExampleSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -369,7 +367,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pl.przelewy24.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "P24ExampleSwift/P24ExampleSwift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				VALIDATE_WORKSPACE = YES_ERROR;
 			};

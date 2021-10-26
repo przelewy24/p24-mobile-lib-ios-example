@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import P24
 
 class ViewController: UIViewController, P24TransferDelegate, P24ApplePayTransactionRegistrar, P24ApplePayDelegate, P24RegisterCardDelegate {
    
