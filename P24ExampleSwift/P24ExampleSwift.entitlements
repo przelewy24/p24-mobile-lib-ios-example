@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.developer.in-app-payments</key>
 	<array>
-		<string>merchant.Przelewy24.sandbox</string>
+		<string>merchant.pl.przelewy24.example</string>
 	</array>
 </dict>
 </plist>
