@@ -8,34 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		ED6AE85D271EE20500C38180 /* libP24.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCE28032664D492006DB89C /* libP24.xcframework */; };
-		ED6AE85E271EE20600C38180 /* libP24.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDCE28032664D492006DB89C /* libP24.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F45604CF23435D4E007A375D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45604CE23435D4E007A375D /* WebKit.framework */; };
-		F4BEE071237595AD00BB45FF /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46242D122C2044D00015951 /* PassKit.framework */; };
 		F4C024A51F162C1800BF2CDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C024A41F162C1800BF2CDF /* ViewController.swift */; };
 		F7CBB8161C6DF8A000EC450A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB8151C6DF8A000EC450A /* AppDelegate.swift */; };
 		F7CBB81B1C6DF8A000EC450A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB8191C6DF8A000EC450A /* Main.storyboard */; };
 		F7CBB81D1C6DF8A000EC450A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB81C1C6DF8A000EC450A /* Assets.xcassets */; };
 		F7CBB8201C6DF8A000EC450A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB81E1C6DF8A000EC450A /* LaunchScreen.storyboard */; };
-		F7CBB82B1C6DF98A00EC450A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7CBB82A1C6DF98A00EC450A /* Security.framework */; };
-		F7CBB82D1C6DF99000EC450A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7CBB82C1C6DF99000EC450A /* UIKit.framework */; };
-		F7CBB82F1C6DF99600EC450A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7CBB82E1C6DF99600EC450A /* Foundation.framework */; };
-		F7CBB8311C6DF99F00EC450A /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F7CBB8301C6DF99F00EC450A /* libxml2.2.tbd */; };
-		F7CBB8331C6DF9A700EC450A /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F7CBB8321C6DF9A700EC450A /* libz.1.2.5.tbd */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		EDCE27FA2664C363006DB89C /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				ED6AE85E271EE20600C38180 /* libP24.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EDCE28032664D492006DB89C /* libP24.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libP24.xcframework; sourceTree = "<group>"; };
@@ -49,11 +27,6 @@
 		F7CBB81C1C6DF8A000EC450A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7CBB81F1C6DF8A000EC450A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7CBB8211C6DF8A000EC450A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7CBB82A1C6DF98A00EC450A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		F7CBB82C1C6DF99000EC450A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F7CBB82E1C6DF99600EC450A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F7CBB8301C6DF99F00EC450A /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
-		F7CBB8321C6DF9A700EC450A /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4BEE071237595AD00BB45FF /* PassKit.framework in Frameworks */,
-				F7CBB8331C6DF9A700EC450A /* libz.1.2.5.tbd in Frameworks */,
-				F45604CF23435D4E007A375D /* WebKit.framework in Frameworks */,
-				F7CBB8311C6DF99F00EC450A /* libxml2.2.tbd in Frameworks */,
-				F7CBB82F1C6DF99600EC450A /* Foundation.framework in Frameworks */,
-				F7CBB82D1C6DF99000EC450A /* UIKit.framework in Frameworks */,
 				ED6AE85D271EE20500C38180 /* libP24.xcframework in Frameworks */,
-				F7CBB82B1C6DF98A00EC450A /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,11 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				EDCE28032664D492006DB89C /* libP24.xcframework */,
-				F7CBB8321C6DF9A700EC450A /* libz.1.2.5.tbd */,
-				F7CBB8301C6DF99F00EC450A /* libxml2.2.tbd */,
-				F7CBB82E1C6DF99600EC450A /* Foundation.framework */,
-				F7CBB82C1C6DF99000EC450A /* UIKit.framework */,
-				F7CBB82A1C6DF98A00EC450A /* Security.framework */,
 				F7CBB8141C6DF8A000EC450A /* P24ExampleSwift */,
 				F7CBB8131C6DF8A000EC450A /* Products */,
 				F46242D022C2044D00015951 /* Frameworks */,
@@ -131,7 +92,6 @@
 				F7CBB80E1C6DF8A000EC450A /* Sources */,
 				F7CBB80F1C6DF8A000EC450A /* Frameworks */,
 				F7CBB8101C6DF8A000EC450A /* Resources */,
-				EDCE27FA2664C363006DB89C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -329,10 +289,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lstdc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pl.przelewy24.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
